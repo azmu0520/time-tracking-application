@@ -5,8 +5,8 @@
 ### Functionalities
 
 - When a user starts working on a task <br />
-  <input type='checkbox' /> <label> User can navigate to a specific project. </label> <br />
-  <input type='checkbox' /> <label> User can select a task and clicks the “Play” icon next to it. From now on, the application starts recording the time for the specific task. </label> <br />
+  <input type='checkbox' checked/> <label> User can navigate to a specific project. </label> <br />
+  <input type='checkbox' checked/> <label> User can select a task and clicks the “Play” icon next to it. From now on, the application starts recording the time for the specific task. </label> <br />
   <input type='checkbox' /> <label> The application can display the current time spent on a task and update it every second. </label> <br />
   <input type='checkbox' /> <label> The current time is displayed next to the task (on the task’s list) but also at the topbar of the application (always visible regardless of a page the user is on). </label> <br /> <br />
 
