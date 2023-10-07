@@ -56,11 +56,7 @@ function Timer({ task_id, sheet, started }) {
         url: "tasks/update",
         method: "POST",
         body: { task_id, time, sheet },
-      })
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => console.log(err));
+      }).catch((err) => console.log(err));
     } catch (error) {
       console.log(error);
     }
@@ -72,7 +68,6 @@ function Timer({ task_id, sheet, started }) {
     dispatch({ type: "isRunning", payload: false });
     dispatch({ type: "stopTime", payload: time });
   };
-  console.log(isRunning, started, "isRunning");
   return (
     <div>
       <h2>{formatTime(time)}</h2>

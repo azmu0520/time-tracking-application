@@ -4,7 +4,13 @@ import { Wrap } from "./style";
 import { data } from "../../utilits/navbar";
 import { NavLink, Outlet } from "react-router-dom";
 import Time from "../CurrentTime";
+import { useAuthContext } from "../../context/Auth";
 export default function Sidebar() {
+  const [, dispatch] = useAuthContext();
+  const logOut = () => {
+    dispatch({ type: "logout" });
+    window.location.reload();
+  };
   return (
     <Wrap>
       <Wrap.Links>
@@ -13,6 +19,7 @@ export default function Sidebar() {
             <Wrap.Link>{title}</Wrap.Link>
           </NavLink>
         ))}
+        <Wrap.Link onClick={logOut}>Quit</Wrap.Link>
         <Time />
       </Wrap.Links>
       <Wrap.Outlet>

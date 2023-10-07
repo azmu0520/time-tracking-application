@@ -36,6 +36,7 @@ Wrap.Link = styled.div`
   display: flex;
   align-items: center;
   padding: 10px 15px;
+  cursor: pointer;
 `;
 
 Wrap.Logo = styled.img`

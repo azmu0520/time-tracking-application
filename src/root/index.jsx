@@ -13,6 +13,7 @@ const Root = () => {
       <Route element={<Sidebar />} key="1">
         {data?.map(({ id, path, Component }) => (
           <Route
+            key={id}
             path={path}
             element={
               <PrivateRoute>

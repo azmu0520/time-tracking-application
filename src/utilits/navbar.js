@@ -1,4 +1,3 @@
-import Generic from "../components/Generic";
 import AddProject from "../components/AddProject";
 import AddTask from "../components/AddTask";
 import Home from "../components/Home";
@@ -21,12 +20,5 @@ export const data = [
     title: "Add Tasks",
     path: "/add-tasks",
     Component: AddTask,
-  },
-
-  {
-    id: 4,
-    title: "Quit",
-    path: "/quit",
-    Component: Generic,
   },
 ];

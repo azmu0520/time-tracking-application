@@ -60,8 +60,8 @@ const Home = () => {
         >
           <Row gutter={16} style={{ rowGap: "15px", width: "100%" }}>
             {tasks?.length ? (
-              tasks?.map((task) => (
-                <Col span={12}>
+              tasks?.map((task, i) => (
+                <Col span={12} key={i}>
                   <Card
                     title={
                       <div style={{ display: "flex" }}>
@@ -85,8 +85,8 @@ const Home = () => {
                     >
                       <ul>
                         time spent:
-                        {task?.timeSheet?.map((time) => (
-                          <li style={{ marginLeft: "auto" }}>
+                        {task?.timeSheet?.map((time, i) => (
+                          <li style={{ marginLeft: "auto" }} key={i}>
                             {`${Math.floor(time / 3600)}h: ${Math.floor(
                               (time % 3600) / 60
                             )}min: ${time % 60}sec`}
@@ -122,10 +122,15 @@ const Home = () => {
           </Row>
         </Modal>
         {data?.length ? (
-          data?.map((item) => (
-            <Col span={8}>
+          data?.map((item, i) => (
+            <Col span={8} key={i}>
               <Card title={item?.title}>
-                <h3 onClick={() => showModal(item?._id)}>{item?.sub_title}</h3>
+                <h3
+                  style={{ cursor: "pointer" }}
+                  onClick={() => showModal(item?._id)}
+                >
+                  Show the Tasks
+                </h3>
               </Card>
             </Col>
           ))
