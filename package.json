@@ -1,6 +1,7 @@
 {
   "name": "time-tracking-application",
   "version": "0.1.0",
+  "owner": "Azizbek Mukhtorov",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
