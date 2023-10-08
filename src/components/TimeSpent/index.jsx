@@ -22,10 +22,11 @@ function Timer({ task_id, sheet, started }) {
     const seconds = time % 60;
     return `${hours}:${minutes}:${seconds}`;
   };
-
+  console.log(task_id, localStorage.getItem("startedTask"), "task_id");
   useEffect(() => {
     let interval;
     if (localStorage.getItem("startedTask") === task_id) {
+      console.log("===============================================");
       if (isRunning) {
         interval = setInterval(() => {
           setTime((prevTime) => prevTime + 1);
@@ -70,11 +71,16 @@ function Timer({ task_id, sheet, started }) {
   };
   return (
     <div>
-      <h2>{formatTime(time)}</h2>
-      <button onClick={startTimer} disabled={isRunning === task_id || started}>
+      <h3 style={{ width: "70px" }}>{formatTime(time)}</h3>
+      <button
+        style={{ marginRight: "10px", cursor: "pointer" }}
+        onClick={startTimer}
+        disabled={isRunning === task_id || started}
+      >
         Start
       </button>
       <button
+        style={{ cursor: "pointer" }}
         onClick={stopTimer}
         disabled={!isRunning || localStorage.getItem("startedTask") !== task_id}
       >

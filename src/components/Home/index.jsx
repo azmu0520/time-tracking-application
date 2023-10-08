@@ -47,7 +47,6 @@ const Home = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-
   return (
     <Wrap>
       <Row gutter={16} style={{ rowGap: "15px" }}>
@@ -95,7 +94,13 @@ const Home = () => {
                       </ul>
                       <div>
                         <h2> Total Time:</h2>
-                        <Wrap.Time stop={task?.time - task?.totalTime}>
+                        <Wrap.Time
+                          stop={
+                            task?.time !== Number
+                              ? task?.time - task?.totalTime
+                              : 10
+                          }
+                        >
                           {task?.totalTime
                             ? `${Math.floor(
                                 task?.totalTime / 3600

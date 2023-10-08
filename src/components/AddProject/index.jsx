@@ -8,7 +8,6 @@ import useRequest from "../../hooks/useRequest.js";
 
 const formSchema = Yup.object().shape({
   title: Yup.string().required("Title Required"),
-  sub_title: Yup.string().required("Subtitle Required"),
 });
 
 const AddProject = () => {
@@ -42,7 +41,6 @@ const AddProject = () => {
           <Formik
             initialValues={{
               title: "",
-              sub_title: "",
             }}
             validationSchema={formSchema}
             onSubmit={handleSubmit}
@@ -50,7 +48,7 @@ const AddProject = () => {
             {({ errors, touched, handleSubmit, isSubmitting }) => (
               <Form onSubmit={handleSubmit}>
                 <Wrap.FormGroup className="my-3">
-                  <label for="title">Project Title</label>
+                  <label htmlFor="title">Project Title</label>
                   <Field
                     type="text"
                     name="title"
@@ -62,23 +60,6 @@ const AddProject = () => {
                   />
                   {errors.title && touched.title ? (
                     <div className="invalid-tooltip mt-25">{errors.title}</div>
-                  ) : null}
-                </Wrap.FormGroup>
-                <Wrap.FormGroup className="my-3">
-                  <label for="sub_title">Project Subtitle</label>
-                  <Field
-                    type="text"
-                    name="sub_title"
-                    required
-                    id="sub_title"
-                    className={`form-control ${
-                      errors.sub_title && touched.sub_title && "is-invalid"
-                    }`}
-                  />
-                  {errors.sub_title && touched.sub_title ? (
-                    <div className="invalid-tooltip mt-25">
-                      {errors.sub_title}
-                    </div>
                   ) : null}
                 </Wrap.FormGroup>
 

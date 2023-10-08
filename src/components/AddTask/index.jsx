@@ -91,7 +91,7 @@ export default function AddTask() {
             }) => (
               <Form onSubmit={handleSubmit}>
                 <Wrap.FormGroup className="my-3">
-                  <label for="module_id">Select Project</label>
+                  <label htmlFor="module_id">Select Project</label>
                   <Field
                     as="select"
                     name="project_id"
@@ -119,7 +119,7 @@ export default function AddTask() {
                   ) : null}
                 </Wrap.FormGroup>
                 <Wrap.FormGroup className="my-3">
-                  <label for="title">Task Title</label>
+                  <label htmlFor="title">Task Title</label>
                   <Field
                     type="text"
                     name="title"
@@ -134,7 +134,7 @@ export default function AddTask() {
                   ) : null}
                 </Wrap.FormGroup>
                 <Wrap.FormGroup className="my-3">
-                  <label for="sub_title">Task Subtitle</label>
+                  <label htmlFor="sub_title">Task Subtitle</label>
                   <Field
                     type="text"
                     name="sub_title"
@@ -152,7 +152,7 @@ export default function AddTask() {
                 </Wrap.FormGroup>
 
                 <Wrap.FormGroup className="my-3">
-                  <label for="hours">Task Given Time</label>
+                  <label htmlFor="hours">Task Given Time</label>
                   <div style={{ display: "flex" }}>
                     <Field
                       type="number"
