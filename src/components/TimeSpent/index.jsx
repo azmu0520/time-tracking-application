@@ -26,7 +26,6 @@ function Timer({ task_id, sheet, started }) {
   useEffect(() => {
     let interval;
     if (localStorage.getItem("startedTask") === task_id) {
-      console.log("===============================================");
       if (isRunning) {
         interval = setInterval(() => {
           setTime((prevTime) => prevTime + 1);

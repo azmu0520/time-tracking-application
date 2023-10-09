@@ -41,6 +41,7 @@ const AddProject = () => {
           <Formik
             initialValues={{
               title: "",
+              created_by: localStorage.getItem("token"),
             }}
             validationSchema={formSchema}
             onSubmit={handleSubmit}
