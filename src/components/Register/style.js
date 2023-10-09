@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as LoginIcon } from "../../assets/icons/login.svg";
-import { Form, Input, Button } from "antd";
+import { Form, Input } from "antd";
 const center = css`
   display: flex;
   align-items: center;

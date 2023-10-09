@@ -73,6 +73,7 @@ export default function AddTask() {
               project_id: "",
               sub_title: "",
               title: "",
+              user_id: localStorage.getItem("token"),
               time: 0,
               hours: "",
               minutes: "",
@@ -82,7 +83,6 @@ export default function AddTask() {
             onSubmit={handleSubmit}
           >
             {({
-              values,
               errors,
               touched,
               setFieldValue,
