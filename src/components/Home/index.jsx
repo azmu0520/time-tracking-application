@@ -18,7 +18,6 @@ const Home = () => {
     });
     // eslint-disable-next-line
   }, [time]);
-  console.log(data);
   return (
     <Wrap>
       <>

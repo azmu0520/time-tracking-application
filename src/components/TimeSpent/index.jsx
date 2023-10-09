@@ -22,7 +22,6 @@ function Timer({ task_id, sheet, started }) {
     const seconds = time % 60;
     return `${hours}:${minutes}:${seconds}`;
   };
-  console.log(task_id, localStorage.getItem("startedTask"), "task_id");
   useEffect(() => {
     let interval;
     if (localStorage.getItem("startedTask") === task_id) {
