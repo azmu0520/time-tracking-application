@@ -6,7 +6,7 @@ export const data = [
   {
     id: 1,
     title: "home",
-    path: "/home",
+    path: "/",
     Component: Home,
   },
   {
